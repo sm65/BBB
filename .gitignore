@@ -1,0 +1,3 @@
+# a comment - this is ignored
+# no .csv files
+/O2*.csv
