@@ -1,7 +1,7 @@
 <?php
 
-$heading='Heading is Here';
+$heading='The BeagleBone Black';
 
-$footer='Footer goes here';
+$footer='Pretty cool, eh?';
 
 ?>
