@@ -22,7 +22,12 @@ $CoreDegC = file_get_contents('/sys/devices/ocp.3/44e10448.bandgap/temp1_input')
 $CoreDegC = $CoreDegC/1000;
 echo $CoreDegC , ' DegC';
 ?>
-
+<h3>Current CPU Frequency:</h3>
+<?php
+$Current_CPU = file_get_contents('/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq');
+$Current_CPU = $Current_CPU/1000;
+echo $Current_CPU, ' MHz'; 
+?>
 </div> <!-- end #content -->
 <?php include('includes/sidebar.php'); ?>
 <?php include('includes/footer.php'); ?>

@@ -5,6 +5,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <meta name="author" content="" />
+<meta http-equiv="refresh" content="60" />
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <title>O2 Readings Page</title>
 </head>

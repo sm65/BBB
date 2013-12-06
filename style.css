@@ -6,6 +6,10 @@ margin:0;
 padding:0;
 }
 
+h3{
+color:#333;
+}
+
 #wrapper {
 width:960px;
 background-color:#f8f8f8;
@@ -49,6 +53,7 @@ height:80px;
 width:675px;
 float:left;
 padding:10px;
+color:blue;
 }
 
 #sidebar {
