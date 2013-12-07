@@ -1,4 +1,4 @@
-Code for my webserver.
+Code for my webserver. www.smealy.com
 
 The file o2.py is scheduled by CRON and runs every minute. 
 
