@@ -1,3 +1,4 @@
 # a comment - this is ignored
 # no .csv files
-/O2*.csv
+*.csv
+O2/degc.py

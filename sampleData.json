@@ -1,0 +1,13 @@
+{
+  "cols": [
+        {"id":"","label":"Time","pattern":"","type":"string"},
+        {"id":"","label":"%O2","pattern":"","type":"number"}
+      ],
+  "rows": [
+        {"c":[{"v":"1","f":null},{"v":20.9,"f":null}]},
+        {"c":[{"v":"2","f":null},{"v":20.8,"f":null}]},
+        {"c":[{"v":"3","f":null},{"v":20.7,"f":null}]},
+        {"c":[{"v":"4","f":null},{"v":21.0,"f":null}]},
+        {"c":[{"v":"5","f":null},{"v":20.9,"f":null}]}
+      ]
+}
