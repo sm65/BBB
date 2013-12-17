@@ -13,7 +13,7 @@ degf = round(degc*1.8+20,1)
 with open('/sys/devices/ocp.3/44e0d000.tscadc/tiadc/iio:device0/in_voltage4_raw', 'r') as f:
         read_data = f.read()
         f.closed
-with open('/var/www/spanAtoD.csv', 'r') as f:
+with open('/tmp/spanAtoD.csv', 'r') as f:
         spanAtoD = f.read()
         f.closed
 #print spanAtoD
@@ -23,6 +23,6 @@ O2 =round( (int(read_data)-zeroAtoD)*calfactor,2)
 
 print_data = str(datenow) + ', ' + str(degf)+ ',' + ' DegF' + ', ' + str(O2) + ',' + ' %O2\n\r'
 #print read_data
-with open('/var/www/O2/Log.csv', 'a') as f:
+with open('/tmp/Log.csv', 'a') as f:
         f.write(print_data)
         f.closed

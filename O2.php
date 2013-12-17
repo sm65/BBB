@@ -16,7 +16,7 @@
 <div id="content">
 <h3>Last 10 O2 Readings</h3>
 <?php
-$filepath='O2/Log.csv';
+$filepath='/tmp/Log.csv';
 $lines = 11;
 $Last10 = implode("", array_slice(file($filepath), -$lines));
 echo nl2br($Last10);
