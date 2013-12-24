@@ -2,6 +2,5 @@
 
 $heading='The BeagleBone Black';
 
-$footer='';
-
+$footer ='';
 ?>
