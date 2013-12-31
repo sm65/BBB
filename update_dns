@@ -1,5 +1,0 @@
-# -*- coding: utf-8 -*-
-import urllib2
-
-urllib2.urlopen("http://dynamicdns.park-your-domain.com/update?host=%s&domain=%s&password=%s" % ("@", "smealy.com", "92dc664a2de44aaf92fe88ed2a8c3bfb"))
-urllib2.urlopen("http://dynamicdns.park-your-domain.com/update?host=%s&domain=%s&password=%s" % ("www", "smealy.com", "92dc664a2de44aaf92fe88ed2a8c3bfb"))
