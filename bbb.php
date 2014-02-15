@@ -55,8 +55,14 @@ return $cpus;
 /* get core information (snapshot) */
 $stat1 = GetCoreInformation();
 session_start();
+if(isset($_SESSION['laststat'])){
 $data = GetCpuPercentages($stat1, $_SESSION['laststat']);
 $_SESSION['laststat']= $stat1;
+}
+else{
+$_SESSION['laststat']= $stat1;
+$data = GetCpuPercentages($stat1, $_SESSION['laststat']);
+}
 session_write_close();
 //$stat1 = GetCoreInformation();
 /* makes a google image chart url */

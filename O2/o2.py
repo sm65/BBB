@@ -21,8 +21,8 @@ zeroAtoD=400
 calfactor=20.9/(int(spanAtoD)-zeroAtoD)
 O2 =round( (int(read_data)-zeroAtoD)*calfactor,2)
 
-print_data = str(datenow) + ', ' + str(degf)+ ',' + ' DegF' + ', ' + str(O2) + ',' + ' %O2\n\r'
+print_data = str(datenow) + ', ' + str(degf)+ ',' + ' DegF' + ', ' + str(O2) + ',' + ' %O2\r'
 #print read_data
-with open('/tmp/Log.csv', 'a') as f:
+with open('/var/www/temp/Log.csv', 'a') as f:
         f.write(print_data)
         f.closed

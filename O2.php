@@ -16,13 +16,13 @@
 <div id="content">
 <h3>Last 10 O2 Readings</h3>
 <?php
-$filepath='/tmp/Log.csv';
+$filepath='temp/Log.csv';
 $lines = 11;
 $Last10 = implode("", array_slice(file($filepath), -$lines));
 echo nl2br($Last10);
 ?>
 <h3>Log file</h3>
-<form method="get" action="O2/Log.csv">
+<form method="get" action="temp/Log.csv">
 <button type="submit">Download</button>
 </form>
 </div> <!-- end #content -->
