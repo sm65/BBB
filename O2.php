@@ -17,7 +17,7 @@
 <h3>Last 10 O2 Readings</h3>
 <?php
 $filepath='temp/Log.csv';
-$lines = 11;
+$lines = 10;
 $Last10 = implode("", array_slice(file($filepath), -$lines));
 echo nl2br($Last10);
 ?>
