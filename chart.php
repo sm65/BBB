@@ -1,4 +1,12 @@
-<meta http-equiv="refresh" content="5" />
+<?php
+session_start();
+if(isset($_SESSION['O2'])){
+?><meta http-equiv="refresh" content="5" /><?php
+}
+else{
+?><meta http-equiv="refresh" content="0" /><?php
+}
+?>
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 
     <!--Load the AJAX API-->
@@ -28,18 +36,17 @@
 <h3>Live Oxygen Readings</h3>
 <?php
 $AtoD = file_get_contents('/sys/devices/ocp.3/44e0d000.tscadc/tiadc/iio:device0/in_voltage4_raw');
-$spanAtoD=file_get_contents('/tmp/spanAtoD.csv');
+$spanAtoD=file_get_contents('temp/spanAtoD.csv');
 $zeroAtoD=400;
 $calfactor=20.9/($spanAtoD-$zeroAtoD);
 $O2=($AtoD-$zeroAtoD)*$calfactor;
 $O2= round($O2,2);
 echo $O2,' %O2';
-session_start();
 $_SESSION['O2'] = $O2;
 session_write_close();
 if (isset($_POST['button']))
 {
-$file='/tmp/spanAtoD.csv';
+$file='temp/spanAtoD.csv';
 file_put_contents($file, $AtoD);
 }
 ?>

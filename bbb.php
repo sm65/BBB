@@ -1,4 +1,12 @@
-<meta http-equiv="refresh" content="5" />
+<?php
+session_start();
+if(isset($_SESSION['laststat'])){
+?><meta http-equiv="refresh" content="5" /><?php
+}
+else{
+?><meta http-equiv="refresh" content="0" /><?php
+}
+?>
 <div id="content">
 <h3>Core Temperature:</h3>
 <?php
@@ -54,7 +62,7 @@ return $cpus;
 }
 /* get core information (snapshot) */
 $stat1 = GetCoreInformation();
-session_start();
+//session_start();
 if(isset($_SESSION['laststat'])){
 $data = GetCpuPercentages($stat1, $_SESSION['laststat']);
 $_SESSION['laststat']= $stat1;

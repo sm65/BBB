@@ -12,15 +12,15 @@ $testdata ='{
         {"id":"","label":"%O2","pattern":"","type":"number"}
       ],
   "rows": [';
-$file ='/tmp/'.$a.'.json';
+$file ='temp/'.$a.'.json';
 file_put_contents($file, $testdata);
 }
 session_write_close();
 $testdata ='
         {"c":[{"v":' .$_SESSION['seconds'].',"f":null},{"v":'.$O2.',"f":null}]},';
-$file ='/tmp/'.$a.'.json';
+$file ='temp/'.$a.'.json';
 file_put_contents($file, $testdata, FILE_APPEND | LOCK_EX);
-$string = file_get_contents('/tmp/'.$a.'.json');
+$string = file_get_contents('temp/'.$a.'.json');
 $string = substr($string, 0, -1) . '
       ]
 }
