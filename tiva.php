@@ -14,7 +14,7 @@
 <?php include('includes/header.php'); ?>
 <?php include('includes/nav.php'); ?>
 <?php include('includes/sidebar.php'); ?>
-<iframe id='tiva-content' src='tiva.php' frameborder='0' </iframe>
+<iframe id='tiva-content' src='http://192.168.254.3' frameborder='0' </iframe>
 </div> <!-- End #wrapper -->
 </body>
 </html>
