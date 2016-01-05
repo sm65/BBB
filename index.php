@@ -6,23 +6,15 @@
 <meta name="keywords" content="" />
 <meta name="author" content="" />
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<title>Live O2 Page</title>
+<title>Home Page</title>
 </head>
         <body>
                 <div id="wrapper">
 <?php include('includes/header.php');
 	include('includes/nav.php');
 	include('includes/sidebar.php');
-/*if(isset($_POST['value'])){
-    if($_POST['value']=='unload'){
-	    session_start();
-	    $a = session_id();
-	    $file ='/tmp/'.$a.'.json';
-            unlink($file); // remove file
-        }
-    }*/
 ?>
-<iframe id='O2-content' src='chart.php' frameborder='0' </iframe>
+
                 </div> <!-- End #wrapper -->
         </body>
 </html>
