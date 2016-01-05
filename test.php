@@ -6,7 +6,7 @@
     google.load("feeds", "1");
 
     function initialize() {
-      var feed = new google.feeds.Feed("http://fastpshb.appspot.com/feed/1/fastpshb");
+      var feed = new google.feeds.Feed("http://feeds.reuters.com/Reuters/worldNews");
       feed.load(function(result) {
         if (!result.error) {
           var container = document.getElementById("feed");
