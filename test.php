@@ -7,6 +7,7 @@
 
     function initialize() {
       var feed = new google.feeds.Feed("http://feeds.reuters.com/Reuters/worldNews");
+      feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
       feed.load(function(result) {
         if (!result.error) {
           var container = document.getElementById("feed");
