@@ -15,18 +15,16 @@ type="text/javascript"></script>
 @import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
 
 #feedControlBBC {
-float: left;
 margin-top : 10px;
-margin-left: auto;
+margin-left: 10px;
 margin-right: auto;
 width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
 #feedControlRTR {
-float: left;
 margin-top : 10px;
-margin-left: auto;
+margin-left: 10px;
 margin-right: auto;
 width : 440px;
 font-size: 12px;
