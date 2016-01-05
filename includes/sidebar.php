@@ -1,7 +1,7 @@
 <div id="sidebar">
 
 <h3>Links</h3>
-        <li><a href="http://www.wunderground.com/US/NC/Indian_Trail.html?extendedsun=sunon&MR=1">WunderGroung IT</a></li>
+        <li><a href="http://www.wunderground.com/US/NC/Indian_Trail.html?extendedsun=sunon&MR=1">WunderGround IT</a></li>
 	<li><a href="http://beagleboard.org/Products/BeagleBone%20Black">BBB Mfg. page</a></li>
 	<li><a href="http://elinux.org/BeagleBoardUbuntu#eMMC:_BeagleBone_Black">BBB eLinux page</a></li>
 	<li><a href="https://github.com/sm65/BBB">Source code page</a></li>
