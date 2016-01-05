@@ -14,7 +14,17 @@ type="text/javascript"></script>
 <style type="text/css">
 @import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
 
-#feedControl {
+#feedControlBBC {
+float: right;	
+margin-top : 10px;
+margin-left: auto;
+margin-right: auto;
+width : 440px;
+font-size: 12px;
+color: #9CADD0;
+}
+#feedControlRTR {
+float: left;	
 margin-top : 10px;
 margin-left: auto;
 margin-right: auto;
@@ -23,11 +33,19 @@ font-size: 12px;
 color: #9CADD0;
 }
 </style>
+
 <script type="text/javascript">
 function load() {
 var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
-new GFdynamicFeedControl(feed, "feedControl");
-
+new GFdynamicFeedControl(feed, "feedControlBBC");
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(load);
+</script>
+<script type="text/javascript">
+function load() {
+var feed ="http://feeds.reuters.com/Reuters/worldNews";
+new GFdynamicFeedControl(feed, "feedControlRTR");
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
@@ -40,7 +58,10 @@ google.setOnLoadCallback(load);
 	include('includes/sidebar.php');
 ?>
 <div id="body">
-<div id="feedControl">Loading...</div>
+<div id="feedControlBBC">Loading BBC...</div>
+</div>
+<div id="body">
+<div id="feedControlRTR">Loading Reuters...</div>
 </div>
                 </div> <!-- End #wrapper -->
         </body>
