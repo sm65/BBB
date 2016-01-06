@@ -158,9 +158,8 @@ google.setOnLoadCallback(load);
 <div id="body">
 <div id="feedControlAPSports">Loading AP Sports...</div>
 </div>
-</div>
 <div id="body">
-<div id="feedControlAPStrange">Loading AP Sports...</div>
+<div id="feedControlAPStrange">Loading AP Strange...</div>
 </div>
                 </div> <!-- End #wrapper -->
         </body>
