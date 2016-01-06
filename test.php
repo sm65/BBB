@@ -45,6 +45,14 @@ width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
+#feedControlAPSports {
+margin-top : 1px;
+margin-left: 10px;
+margin-right: auto;
+width : 440px;
+font-size: 12px;
+color: #9CADD0;
+}
 </style>
 
 <script type="text/javascript">
@@ -82,6 +90,7 @@ new GFdynamicFeedControl(feed, "feedControlAPScience", options);
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
 </script>
+
 </script>
 <script type="text/javascript">
 function load() {
@@ -90,6 +99,19 @@ var feed ="http://hosted2.ap.org/atom/APDEFAULT/4e67281c3f754d0696fbfdee0f3f1469
     numResults : 6
   }
 new GFdynamicFeedControl(feed, "feedControlAPEntertainment", options);
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(load);
+</script>
+
+</script>
+<script type="text/javascript">
+function load() {
+var feed ="http://hosted2.ap.org/atom/APDEFAULT/347875155d53465d95cec892aeb06419";
+  var options = {
+    numResults : 6
+  }
+new GFdynamicFeedControl(feed, "feedControlAPSports", options);
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
@@ -112,6 +134,9 @@ google.setOnLoadCallback(load);
 </div>
 <div id="body">
 <div id="feedControlAPEntertainment">Loading AP Entertainment...</div>
+</div>
+<div id="body">
+<div id="feedControlAPSports">Loading AP Entertainment...</div>
 </div>
                 </div> <!-- End #wrapper -->
         </body>
