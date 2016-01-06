@@ -44,7 +44,7 @@ function load() {
 var feed ="http://feeds.reuters.com/Reuters/worldNews";
   var options = {
     numResults : 6,
-    displayTime : 0
+    scrollOnFadeOut : false
   }
 new GFdynamicFeedControl(feed, "feedControlRTR", options);
 }
