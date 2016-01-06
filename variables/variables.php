@@ -1,6 +1,6 @@
 <?php
 
-$heading='The BeagleBone Black';
+$heading='';
 
 $footer ='';
 ?>
