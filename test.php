@@ -58,6 +58,7 @@ google.setOnLoadCallback(load);
                 <div id="wrapper">
 <?php include('includes/header.php');
 	include('includes/nav.php');
+	include('includes/sidebar.php');
 	?>
 <div id="body">
 <div id="feedControlAPS">Loading Ap Science...</div>
@@ -65,8 +66,6 @@ google.setOnLoadCallback(load);
 <div id="body">
 <div id="feedControlRTR">Loading Reuters...</div>
 </div>
-<?php include('includes/sidebar.php');
-?>
                 </div> <!-- End #wrapper -->
         </body>
 </html>
