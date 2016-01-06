@@ -1,6 +1,6 @@
 <div id="sidebar">
 
-<h3>Links</h3>http:
+<h3>Links</h3>
         <li><a href="http://www.wunderground.com/US/NC/Indian_Trail.html?extendedsun=sunon&MR=1">WunderGround IT</a></li>
         <li><a href="http://rd.excite.com/sp/em">Email</a></li>
 	<li><a href="http://beagleboard.org/Products/BeagleBone%20Black">BBB Mfg. page</a></li>
