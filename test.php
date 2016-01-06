@@ -56,7 +56,8 @@ google.setOnLoadCallback(load);
 </head>
         <body>
                 <div id="wrapper">
-<?php include('includes/header.php');
+<?php /*include('includes/header.php');*/
+
 	include('includes/nav.php');
 	include('includes/sidebar.php');
 ?>
