@@ -58,6 +58,7 @@ google.setOnLoadCallback(load);
                 <div id="wrapper">
 <?php include('includes/header.php');
 	include('includes/nav.php');
+	?>
 <div id="body">
 <div id="feedControlAPS">Loading Ap Science...</div>
 </div>
