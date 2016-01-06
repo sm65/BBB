@@ -104,13 +104,13 @@ google.setOnLoadCallback(load);
 </div>
 <div id="body">
 <div id="feedControlNational">Loading AP National...</div>
-</div>
+</div><!--
 <div id="body">
 <div id="feedControlAPScience">Loading AP Science...</div>
 </div>
 <div id="body">
 <div id="feedControlAPEntertainment">Loading AP Entertainment...</div>
-</div>
+</div>-->
                 </div> <!-- End #wrapper -->
         </body>
 </html>
