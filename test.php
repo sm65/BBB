@@ -33,7 +33,7 @@ color: #9CADD0;
 
 <script type="text/javascript">
 function load() {
-var feed ="http://feeds.reuters.com/reuters/topNews";
+var feed ="http://hosted.ap.org/lineups/SCIENCEHEADS-rss_2.0.xml?SITE=OHLIM&SECTION=HOME";
   var options = {
     numResults : 6
   }
@@ -61,7 +61,7 @@ google.setOnLoadCallback(load);
 	include('includes/sidebar.php');
 ?>
 <div id="body">
-<div id="feedControlBBC">Loading Ap Science...</div>
+<div id="feedControlAPS">Loading Ap Science...</div>
 </div>
 <div id="body">
 <div id="feedControlRTR">Loading Reuters...</div>
