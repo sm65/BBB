@@ -53,6 +53,14 @@ width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
+#feedControlAPStrange {
+margin-top : 1px;
+margin-left: 10px;
+margin-right: auto;
+width : 440px;
+font-size: 12px;
+color: #9CADD0;
+}
 </style>
 
 <script type="text/javascript">
@@ -116,6 +124,18 @@ new GFdynamicFeedControl(feed, "feedControlAPSports", options);
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
 </script>
+</script>
+<script type="text/javascript">
+function load() {
+var feed ="http://hosted2.ap.org/atom/APDEFAULT/aa9398e6757a46fa93ed5dea7bd3729e";
+  var options = {
+    numResults : 6
+  }
+new GFdynamicFeedControl(feed, "feedControlAPStrange", options);
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(load);
+</script>
 </head>
         <body>
                 <div id="wrapper">
@@ -136,7 +156,11 @@ google.setOnLoadCallback(load);
 <div id="feedControlAPEntertainment">Loading AP Entertainment...</div>
 </div>
 <div id="body">
-<div id="feedControlAPSports">Loading AP Entertainment...</div>
+<div id="feedControlAPSports">Loading AP Sports...</div>
+</div>
+</div>
+<div id="body">
+<div id="feedControlAPStrange">Loading AP Sports...</div>
 </div>
                 </div> <!-- End #wrapper -->
         </body>
