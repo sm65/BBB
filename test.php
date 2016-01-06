@@ -64,7 +64,9 @@ google.setOnLoadCallback(load);
 <div id="body">
 <div id="feedControlRTR">Loading Reuters...</div>
 </div>
-<?php include('includes/footer.php'); ?>
+<?php include('includes/sidebar.php');
+      include('includes/footer.php');
+?>
                 </div> <!-- End #wrapper -->
         </body>
 </html>
