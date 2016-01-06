@@ -13,7 +13,7 @@ type="text/javascript"></script>
 
 <style type="text/css">
 @import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
-#feedControlBBC {
+#feedControlAPS {
 margin-top : 10px;
 margin-left: 10px;
 margin-right: auto;
@@ -33,8 +33,11 @@ color: #9CADD0;
 
 <script type="text/javascript">
 function load() {
-var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
-new GFdynamicFeedControl(feed, "feedControlBBC");
+var feed ="http://hosted2.ap.org/atom/APDEFAULT/b2f0ca3a594644ee9e50a8ec4ce2d6de";
+  var options = {
+    numResults : 6
+  }
+new GFdynamicFeedControl(feed, "feedControlAPS");
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
@@ -43,8 +46,7 @@ google.setOnLoadCallback(load);
 function load() {
 var feed ="http://feeds.reuters.com/Reuters/worldNews";
   var options = {
-    numResults : 6,
-    scrollOnFadeOut : false
+    numResults : 6
   }
 new GFdynamicFeedControl(feed, "feedControlRTR", options);
 }
