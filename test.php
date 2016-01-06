@@ -33,7 +33,7 @@ color: #9CADD0;
 
 <script type="text/javascript">
 function load() {
-var feed ="http://hosted.ap.org/lineups/SCIENCEHEADS-rss_2.0.xml?SITE=OHLIM&SECTION=HOME";
+var feed ="http://feeds.reuters.com/reuters/topNews";
   var options = {
     numResults : 6
   }
