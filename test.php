@@ -37,7 +37,7 @@ var feed ="http://hosted.ap.org/lineups/SCIENCEHEADS-rss_2.0.xml?SITE=OHLIM&SECT
   var options = {
     numResults : 6
   }
-new GFdynamicFeedControl(feed, "feedControlAPS");
+new GFdynamicFeedControl(feed, "feedControlAPS", options);
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
