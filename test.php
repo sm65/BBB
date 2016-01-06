@@ -105,7 +105,7 @@ google.setOnLoadCallback(load);
 <div id="feedControlAPWorld">Loading AP World...</div>
 </div>
 <div id="body">
-<div id="feedControlNational">Loading AP National...</div>
+<div id="feedControlAPNational">Loading AP National...</div>
 </div>
 <div id="body">
 <div id="feedControlAPScience">Loading AP Science...</div>
