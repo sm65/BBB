@@ -58,17 +58,19 @@ new GFdynamicFeedControl(feed, "feedControlAPWorld", options);
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
 </script>
+
 <script type="text/javascript">
 function load() {
 var feed ="http://hosted2.ap.org/atom/APDEFAULT/386c25518f464186bf7a2ac026580ce7";
   var options = {
     numResults : 6
   }
-new GFdynamicFeedControl(feed, "feedControlNational", options);
+new GFdynamicFeedControl(feed, "feedControlAPNational", options);
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
 </script>
+
 <script type="text/javascript">
 function load() {
 var feed ="http://hosted2.ap.org/atom/APDEFAULT/b2f0ca3a594644ee9e50a8ec4ce2d6de";
@@ -104,13 +106,13 @@ google.setOnLoadCallback(load);
 </div>
 <div id="body">
 <div id="feedControlNational">Loading AP National...</div>
-</div><!--
+</div>
 <div id="body">
 <div id="feedControlAPScience">Loading AP Science...</div>
 </div>
 <div id="body">
 <div id="feedControlAPEntertainment">Loading AP Entertainment...</div>
-</div>-->
+</div>
                 </div> <!-- End #wrapper -->
         </body>
 </html>
