@@ -61,6 +61,14 @@ width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
+#feedControlTech {
+margin-top : 1px;
+margin-left: 10px;
+margin-right: auto;
+width : 440px;
+font-size: 12px;
+color: #9CADD0;
+}
 </style>
 
 <script type="text/javascript">
@@ -136,6 +144,18 @@ new GFdynamicFeedControl(feed, "feedControlStrange", options);
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
 </script>
+</script>
+<script type="text/javascript">
+function load() {
+var feed ="http://feeds.reuters.com/reuters/technologyNews";
+  var options = {
+    numResults : 6
+  }
+new GFdynamicFeedControl(feed, "feedControlTech", options);
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(load);
+</script>
 </head>
         <body>
                 <div id="wrapper">
@@ -160,6 +180,9 @@ google.setOnLoadCallback(load);
 </div>
 <div id="body">
 <div id="feedControlStrange">Loading Strange...</div>
+</div>
+<div id="body">
+<div id="feedControlTech">Loading Tech...</div>
 </div>
                 </div> <!-- End #wrapper -->
         </body>
