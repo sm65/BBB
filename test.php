@@ -65,7 +65,7 @@ color: #9CADD0;
 
 <script type="text/javascript">
 function load() {
-var feed ="http://hosted2.ap.org/atom/APDEFAULT/cae69a7523db45408eeb2b3a98c0c9c5";
+var feed ="http://feeds.reuters.com/Reuters/worldNews";
   var options = {
     numResults : 6
   }
