@@ -13,7 +13,7 @@ type="text/javascript"></script>
 
 <style type="text/css">
 @import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
-#feedControlAPWorld {
+#feedControlWorld {
 margin-top : 1px;
 margin-left: 10px;
 margin-right: auto;
@@ -21,7 +21,7 @@ width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
-#feedControlAPNational {
+#feedControlNational {
 margin-top : 1px;
 margin-left: 10px;
 margin-right: auto;
@@ -29,7 +29,7 @@ width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
-#feedControlAPScience {
+#feedControlScience {
 margin-top : 1px;
 margin-left: 10px;
 margin-right: auto;
@@ -37,7 +37,7 @@ width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
-#feedControlAPEntertainment {
+#feedControlEntertainment {
 margin-top : 1px;
 margin-left: 10px;
 margin-right: auto;
@@ -45,7 +45,7 @@ width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
-#feedControlAPSports {
+#feedControlSports {
 margin-top : 1px;
 margin-left: 10px;
 margin-right: auto;
@@ -53,7 +53,7 @@ width : 440px;
 font-size: 12px;
 color: #9CADD0;
 }
-#feedControlAPStrange {
+#feedControlStrange {
 margin-top : 1px;
 margin-left: 10px;
 margin-right: auto;
@@ -65,11 +65,11 @@ color: #9CADD0;
 
 <script type="text/javascript">
 function load() {
-var feed ="http://hosted2.ap.org/atom/APDEFAULT/cae69a7523db45408eeb2b3a98c0c9c5";
+var feed ="http://feeds.reuters.com/Reuters/worldNews";
   var options = {
     numResults : 6
   }
-new GFdynamicFeedControl(feed, "feedControlAPWorld", options);
+new GFdynamicFeedControl(feed, "feedControlWorld", options);
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
@@ -77,11 +77,11 @@ google.setOnLoadCallback(load);
 
 <script type="text/javascript">
 function load() {
-var feed ="http://hosted2.ap.org/atom/APDEFAULT/386c25518f464186bf7a2ac026580ce7";
+var feed ="http://feeds.reuters.com/Reuters/domesticNews";
   var options = {
     numResults : 6
   }
-new GFdynamicFeedControl(feed, "feedControlAPNational", options);
+new GFdynamicFeedControl(feed, "feedControlNational", options);
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
@@ -89,24 +89,11 @@ google.setOnLoadCallback(load);
 
 <script type="text/javascript">
 function load() {
-var feed ="http://hosted2.ap.org/atom/APDEFAULT/b2f0ca3a594644ee9e50a8ec4ce2d6de";
+var feed ="http://feeds.reuters.com/reuters/scienceNews";
   var options = {
     numResults : 6
   }
-new GFdynamicFeedControl(feed, "feedControlAPScience", options);
-}
-google.load("feeds", "1");
-google.setOnLoadCallback(load);
-</script>
-
-</script>
-<script type="text/javascript">
-function load() {
-var feed ="http://hosted2.ap.org/atom/APDEFAULT/4e67281c3f754d0696fbfdee0f3f1469";
-  var options = {
-    numResults : 6
-  }
-new GFdynamicFeedControl(feed, "feedControlAPEntertainment", options);
+new GFdynamicFeedControl(feed, "feedControlScience", options);
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
@@ -115,11 +102,24 @@ google.setOnLoadCallback(load);
 </script>
 <script type="text/javascript">
 function load() {
-var feed ="http://hosted2.ap.org/atom/APDEFAULT/347875155d53465d95cec892aeb06419";
+var feed ="http://feeds.reuters.com/reuters/entertainment";
   var options = {
     numResults : 6
   }
-new GFdynamicFeedControl(feed, "feedControlAPSports", options);
+new GFdynamicFeedControl(feed, "feedControlEntertainment", options);
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(load);
+</script>
+
+</script>
+<script type="text/javascript">
+function load() {
+var feed ="http://feeds.reuters.com/reuters/sportsNews";
+  var options = {
+    numResults : 6
+  }
+new GFdynamicFeedControl(feed, "feedControlSports", options);
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
@@ -127,11 +127,11 @@ google.setOnLoadCallback(load);
 </script>
 <script type="text/javascript">
 function load() {
-var feed ="http://hosted2.ap.org/atom/APDEFAULT/aa9398e6757a46fa93ed5dea7bd3729e";
+var feed ="http://feeds.reuters.com/reuters/oddlyEnoughNews";
   var options = {
     numResults : 6
   }
-new GFdynamicFeedControl(feed, "feedControlAPStrange", options);
+new GFdynamicFeedControl(feed, "feedControlStrange", options);
 }
 google.load("feeds", "1");
 google.setOnLoadCallback(load);
@@ -144,22 +144,22 @@ google.setOnLoadCallback(load);
 	include('includes/sidebar.php');
 	?>
 <div id="body">
-<div id="feedControlAPWorld">Loading AP World...</div>
+<div id="feedControlWorld">Loading World...</div>
 </div>
 <div id="body">
-<div id="feedControlAPNational">Loading AP National...</div>
+<div id="feedControlNational">Loading National...</div>
 </div>
 <div id="body">
-<div id="feedControlAPScience">Loading AP Science...</div>
+<div id="feedControlScience">Loading AP Science...</div>
 </div>
 <div id="body">
-<div id="feedControlAPEntertainment">Loading AP Entertainment...</div>
+<div id="feedControlEntertainment">Loading Entertainment...</div>
 </div>
 <div id="body">
-<div id="feedControlAPSports">Loading AP Sports...</div>
+<div id="feedControlSports">Loading Sports...</div>
 </div>
 <div id="body">
-<div id="feedControlAPStrange">Loading AP Strange...</div>
+<div id="feedControlStrange">Loading Strange...</div>
 </div>
                 </div> <!-- End #wrapper -->
         </body>
