@@ -12,7 +12,7 @@
 
 <?php
 /* Open a server socket to port 1234 on localhost */
-$server = stream_socket_server('tcp://127.0.0.1:5001');
+$server = stream_socket_server('udp://127.0.0.1:5001');
 
 /* Accept a connection */
 $socket = stream_socket_accept($server);
