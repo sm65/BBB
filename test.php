@@ -8,6 +8,10 @@
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <title>Test Page</title>
  <body>
+ 	<?php include('includes/header.php');
+	include('includes/nav.php');
+	include('includes/sidebar.php');
+	?>
   <h1>UDP server test</h1> 
 
 <?php
@@ -30,9 +34,5 @@ echo "Data: '" . stream_socket_recvfrom($socket, 14) . "'\n";
 fclose($socket);
 fclose($server);
 ?>
-<?php include('includes/header.php');
-	include('includes/nav.php');
-	include('includes/sidebar.php');
-	?>
  </body>
 </html>
