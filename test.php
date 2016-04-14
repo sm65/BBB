@@ -30,6 +30,9 @@ echo "Data: '" . stream_socket_recvfrom($socket, 14) . "'\n";
 fclose($socket);
 fclose($server);
 ?>
-
+<?php include('includes/header.php');
+	include('includes/nav.php');
+	include('includes/sidebar.php');
+	?>
  </body>
 </html>
