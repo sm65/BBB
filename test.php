@@ -9,18 +9,27 @@
 <title>Test Page</title>
  <body>
   <h1>UDP server test</h1> 
+
 <?php
-$socket = stream_socket_server("udp://127.0.0.1:5001", $errno, $errstr, STREAM_SERVER_BIND);
-if (!$socket) {
-    die("$errstr ($errno)");
-}
+/* Open a server socket to port 1234 on localhost */
+$server = stream_socket_server('tcp://127.0.0.1:5001');
 
-do {
-    $pkt = stream_socket_recvfrom($socket, 1, 0, $peer);
-    echo "$peer\n";
-    stream_socket_sendto($socket, date("D M j H:i:s Y\r\n"), 0, $peer);
-} while ($pkt !== false);
+/* Accept a connection */
+$socket = stream_socket_accept($server);
 
+/* Grab a packet (1500 is a typical MTU size) of OOB data */
+echo "Received Out-Of-Band: '" . stream_socket_recvfrom($socket, 1500, STREAM_OOB) . "'\n";
+
+/* Take a peek at the normal in-band data, but don't comsume it. */
+echo "Data: '" . stream_socket_recvfrom($socket, 1500, STREAM_PEEK) . "'\n";
+
+/* Get the exact same packet again, but remove it from the buffer this time. */
+echo "Data: '" . stream_socket_recvfrom($socket, 1500) . "'\n";
+
+/* Close it up */
+fclose($socket);
+fclose($server);
 ?>
+
  </body>
 </html>
