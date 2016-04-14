@@ -8,6 +8,19 @@
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <title>Test Page</title>
  <body>
-  <h1>My UDP server test</h1>             
+  <h1>UDP server test</h1> 
+<?php
+$socket = stream_socket_server("udp://127.0.0.1:1113", $errno, $errstr, STREAM_SERVER_BIND);
+if (!$socket) {
+    die("$errstr ($errno)");
+}
+
+do {
+    $pkt = stream_socket_recvfrom($socket, 1, 0, $peer);
+    echo "$peer\n";
+    stream_socket_sendto($socket, date("D M j H:i:s Y\r\n"), 0, $peer);
+} while ($pkt !== false);
+
+?>
  </body>
 </html>
