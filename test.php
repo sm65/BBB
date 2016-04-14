@@ -15,6 +15,7 @@
   <h1>UDP server test</h1> 
 
 <?php
+socket_set_option($sock,SOL_SOCKET,SO_RCVTIMEO,array("sec"=>2,"usec"=>0));
 /* Open a server socket to port 1234 on localhost */
 $server = stream_socket_server('udp://127.0.0.1:5001');
 
@@ -22,13 +23,13 @@ $server = stream_socket_server('udp://127.0.0.1:5001');
 $socket = stream_socket_accept($server);
 
 /* Grab a packet (1500 is a typical MTU size) of OOB data */
-echo "Received Out-Of-Band: '" . stream_socket_recvfrom($socket, 14, STREAM_OOB) . "'\n";
+echo "Received Out-Of-Band: '" . stream_socket_recvfrom($socket, 20, STREAM_OOB) . "'\n";
 
 /* Take a peek at the normal in-band data, but don't comsume it. */
-echo "Data: '" . stream_socket_recvfrom($socket, 14, STREAM_PEEK) . "'\n";
+echo "Data: '" . stream_socket_recvfrom($socket, 20, STREAM_PEEK) . "'\n";
 
 /* Get the exact same packet again, but remove it from the buffer this time. */
-echo "Data: '" . stream_socket_recvfrom($socket, 14) . "'\n";
+echo "Data: '" . stream_socket_recvfrom($socket, 20) . "'\n";
 
 /* Close it up */
 fclose($socket);
