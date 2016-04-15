@@ -22,13 +22,13 @@ $server = stream_socket_server('udp://192.168.1.42:5001');
 $socket = stream_socket_accept($server);
 
 /* Grab a packet (1500 is a typical MTU size) of OOB data */
-echo "Received Out-Of-Band: '" . stream_socket_recvfrom($socket, 14, STREAM_OOB) . "'\n";
+echo "Received Out-Of-Band: '" . stream_socket_recvfrom($socket, 1400, STREAM_OOB) . "'\n";
 
 /* Take a peek at the normal in-band data, but don't comsume it. */
-echo "Data: '" . stream_socket_recvfrom($socket, 14, STREAM_PEEK) . "'\n";
+echo "Data: '" . stream_socket_recvfrom($socket, 1400, STREAM_PEEK) . "'\n";
 
 /* Get the exact same packet again, but remove it from the buffer this time. */
-echo "Data: '" . stream_socket_recvfrom($socket, 14) . "'\n";
+echo "Data: '" . stream_socket_recvfrom($socket, 1400) . "'\n";
 
 /* Close it up */
 fclose($socket);
