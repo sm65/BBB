@@ -13,24 +13,20 @@
 	include('includes/sidebar.php');
 	?>
   <h1>UDP server test</h1> 
+
 <?php
-# server.php
-echo "test \n";
-$server = stream_socket_server("udp://127.0.0.1:5001", $errno, $errorMessage);
-
-if ($server === false) {
-    throw new UnexpectedValueException("Could not bind to socket: $errorMessage");
-    echo "Could not bind to socket \n";
+$socket = stream_socket_server("udp://127.0.0.1:5001", $errno, $errstr, STREAM_SERVER_BIND);
+if (!$socket) {
+    die("$errstr ($errno)");
+    echo"failed \n";
 }
 
-for (;;) {
-    $client = @stream_socket_accept($server);
+do {
+    $pkt = stream_socket_recvfrom($socket, 1, 0, $peer);
+    echo "$peer\n";
+    stream_socket_sendto($socket, date("D M j H:i:s Y\r\n"), 0, $peer);
+} while ($pkt !== false);
 
-    if ($client) {
-        stream_copy_to_stream($client, $client);
-        fclose($client);
-    }
-}
 ?>
  </body>
 </html>
