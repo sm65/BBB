@@ -22,11 +22,12 @@ if (!$socket) {
     die("$errstr ($errno)");
     echo"failed \n";
 }
-echo"$socket \n";
-for ($x = 0; $x <= 10; $x++){
+
 echo "Data: '" . stream_socket_recvfrom($socket, 14) . "'\n";
-}
+
 echo"test2 \n";
+fclose($socket);
+fclose($server);
 ?>
  </body>
 </html>
