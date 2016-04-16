@@ -20,7 +20,7 @@
 error_reporting(~E_WARNING);
  
 //Create a UDP socket
-if(!($sock = socket_create(AF_INET, SOCK_DGRAM, 0)))
+if(!($sock = socket_create(AF_INET, SOCK_DGRAM,  SOL_UDP)))
 {
     $errorcode = socket_last_error();
     $errormsg = socket_strerror($errorcode);
