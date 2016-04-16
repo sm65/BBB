@@ -55,6 +55,6 @@ while(1)
 }
  
 socket_close($sock);
->?
+?>
  </body>
 </html>
