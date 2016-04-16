@@ -16,10 +16,11 @@
 <?php
 # server.php
 
-$server = stream_socket_server("udp://127.0.0.1:5002", $errno, $errorMessage);
+$server = stream_socket_server("udp://127.0.0.1:5001", $errno, $errorMessage);
 
 if ($server === false) {
     throw new UnexpectedValueException("Could not bind to socket: $errorMessage");
+    echo "Could not bind to socket: $errorMessage";
 }
 
 for (;;) {
