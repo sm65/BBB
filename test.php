@@ -13,26 +13,31 @@
 	include('includes/sidebar.php');
 	?>
   <h1>UDP server test</h1> 
-
 <?php
-/* Open a server socket to port 1234 on localhost */
-$server = stream_socket_server('udp://192.168.1.42:5001');
+//Create socket.
+$socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+if (!$socket) { die("socket_create failed.\n"); }
 
-/* Accept a connection */
-$socket = stream_socket_accept($server);
+//Set socket options.
+socket_set_nonblock($socket);
+socket_set_option($socket, SOL_SOCKET, SO_BROADCAST, 1);
+socket_set_option($socket, SOL_SOCKET, SO_REUSEADDR, 1);
+if (defined('SO_REUSEPORT'))
+    socket_set_option($socket, SOL_SOCKET, SO_REUSEPORT, 1);
 
-/* Grab a packet (1500 is a typical MTU size) of OOB data */
-echo "Received Out-Of-Band: '" . stream_socket_recvfrom($socket, 1400, STREAM_OOB) . "'\n";
+//Bind to any address & port 5001.
+if(!socket_bind($socket, '0.0.0.0', 5001))
+    die("socket_bind failed.\n");
 
-/* Take a peek at the normal in-band data, but don't comsume it. */
-echo "Data: '" . stream_socket_recvfrom($socket, 1400, STREAM_PEEK) . "'\n";
+//Wait for data.
+$read = array($socket); $write = NULL; $except = NULL;
+while(socket_select($read, $write, $except, NULL)) {
 
-/* Get the exact same packet again, but remove it from the buffer this time. */
-echo "Data: '" . stream_socket_recvfrom($socket, 1400) . "'\n";
-
-/* Close it up */
-fclose($socket);
-fclose($server);
+    //Read received packets with a maximum size of 5120 bytes.
+    while(is_string($data = socket_read($socket, 5120))) {
+        echo $data;
+    }
+}
 ?>
  </body>
 </html>
