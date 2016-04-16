@@ -22,6 +22,8 @@ if (!$socket) {
     echo"failed \n";
 }
 echo"$socket \n";
+    $pkt = stream_socket_recvfrom($socket, 1, 0, $peer);
+    echo "$peer \n";
 echo"test2 \n";
 ?>
  </body>
