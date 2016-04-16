@@ -21,10 +21,6 @@ if (!$socket) {
     die("$errstr ($errno)");
     echo"failed \n";
 }
-do {
-    $pkt = stream_socket_recvfrom($socket, 1, 0, $peer);
-    echo "$peer\n";
-} while ($pkt !== false);
 ?>
  </body>
 </html>
