@@ -20,7 +20,7 @@ $socket = stream_socket_server("udp://127.0.0.1:1113", $errno, $errstr, STREAM_S
 if (!$socket) {
     die("$errstr ($errno)");
 }
-
+echo $socket;
 echo"test2 \n";
 
 ?>
