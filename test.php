@@ -14,28 +14,20 @@
 	?>
   <h1>UDP server test</h1> 
 <?php
-//Create socket.
-$socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
-if (!$socket) { die("socket_create failed.\n"); }
+# server.php
 
-//Set socket options.
-socket_set_nonblock($socket);
-socket_set_option($socket, SOL_SOCKET, SO_BROADCAST, 1);
-socket_set_option($socket, SOL_SOCKET, SO_REUSEADDR, 1);
-if (defined('SO_REUSEPORT'))
-    socket_set_option($socket, SOL_SOCKET, SO_REUSEPORT, 1);
+$server = stream_socket_server("udp://127.0.0.1:5001", $errno, $errorMessage);
 
-//Bind to any address & port 5001.
-if(!socket_bind($socket, '0.0.0.0', 5001))
-    die("socket_bind failed.\n");
+if ($server === false) {
+    throw new UnexpectedValueException("Could not bind to socket: $errorMessage");
+}
 
-//Wait for data.
-$read = array($socket); $write = NULL; $except = NULL;
-while(socket_select($read, $write, $except, NULL)) {
+for (;;) {
+    $client = @stream_socket_accept($server);
 
-    //Read received packets with a maximum size of 5120 bytes.
-    while(is_string($data = socket_read($socket, 5120))) {
-        echo $data;
+    if ($client) {
+        stream_copy_to_stream($client, $client);
+        fclose($client);
     }
 }
 ?>
