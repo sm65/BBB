@@ -15,12 +15,12 @@
   <h1>UDP server test</h1> 
 <?php
 # server.php
-
+echo "test \n";
 $server = stream_socket_server("udp://127.0.0.1:5001", $errno, $errorMessage);
 
 if ($server === false) {
     throw new UnexpectedValueException("Could not bind to socket: $errorMessage");
-    echo "Could not bind to socket: $errorMessage";
+    echo "Could not bind to socket \n";
 }
 
 for (;;) {
