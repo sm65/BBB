@@ -15,12 +15,14 @@
   <h1>UDP server test</h1> 
 
 <?php
-echo"test \n";
+echo"test1 \n";
 $socket = stream_socket_server("udp://127.0.0.1:5001", $errno, $errstr, STREAM_SERVER_BIND);
 if (!$socket) {
     die("$errstr ($errno)");
     echo"failed \n";
 }
+echo"$socket \n";
+echo"test2 \n";
 ?>
  </body>
 </html>
