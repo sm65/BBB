@@ -31,7 +31,7 @@ if(!($sock = socket_create(AF_INET, SOCK_DGRAM, 0)))
 echo "Socket created \n";
  
 // Bind the source address
-if( !socket_bind($sock, "0.0.0.0" , 9999) )
+if( !socket_bind($sock, "0.0.0.0" , 5001) )
 {
     $errorcode = socket_last_error();
     $errormsg = socket_strerror($errorcode);
