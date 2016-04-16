@@ -16,17 +16,14 @@
 
 <?php
 echo"test1 \n";
-$server = stream_socket_server('udp://127.0.0.1:5001');
-$socket = stream_socket_accept($server);
-if (!$socket) {
+$server = stream_socket_server('udp://127.0.0.1:5001, $errno, $errstr');
+if (!$server) {
     die("$errstr ($errno)");
     echo"failed \n";
 }
-
-echo "Data: '" . stream_socket_recvfrom($socket, 14) . "'\n";
+echo "Data: '" . stream_socket_recvfrom($server, 14) . "'\n";
 
 echo"test2 \n";
-fclose($socket);
 fclose($server);
 ?>
  </body>
