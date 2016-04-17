@@ -13,23 +13,5 @@
 	include('includes/sidebar.php');
 	?>
   <h1>UDP server test</h1> 
-
-<?php
- 
-//Reduce errors
-error_reporting(~E_WARNING);
- 
-//Create a UDP socket
-if(!($sock = socket_create(AF_INET, SOCK_DGRAM,  SOL_UDP)))
-{
-    $errorcode = socket_last_error();
-    $errormsg = socket_strerror($errorcode);
-    echo "Socket create failed \n"; 
-    die("Couldn't create socket: [$errorcode] $errormsg \n");
-}
-socket_set_option($sock, SOL_SOCKET, SO_REUSEADDR, 1) 
-echo "Socket created \n";
-socket_close($sock);
-?>
  </body>
 </html>
