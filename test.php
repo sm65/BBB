@@ -27,7 +27,7 @@ if(!($sock = socket_create(AF_INET, SOCK_DGRAM,  SOL_UDP)))
     echo "Socket create failed \n"; 
     die("Couldn't create socket: [$errorcode] $errormsg \n");
 }
-socket_set_option($socket, SOL_SOCKET, SO_REUSEADDR, 1) 
+socket_set_option($sock, SOL_SOCKET, SO_REUSEADDR, 1) 
 echo "Socket created \n";
  
 // Bind the source address
