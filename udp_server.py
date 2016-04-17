@@ -14,3 +14,5 @@ try:
         print "received message:", data, " address:", addr
 except KeyboardInterrupt:
     pass
+    sock.shutdown(socket.SHUT_RDWR)
+    sock.close()
