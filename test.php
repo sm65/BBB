@@ -13,5 +13,9 @@
 	include('includes/sidebar.php');
 	?>
   <h1>UDP server test</h1> 
+  <?php
+  $socket=socket_create(AF_INET,SOCK_DGRAM,0);
+  echo "socket: ".$socket;
+  ?>
  </body>
 </html>
