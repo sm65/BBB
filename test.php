@@ -15,10 +15,9 @@
   <h1>UDP server test</h1> 
   <?php
   $addr = '0.0.0.0';
-  echo localhost;
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
-  $socket_bind($sock,$addr,5001);
   echo "socket: ".$sock;
+  $socket_bind($sock,"localhost",5001);
   $socket_close($sock);
   ?>
  </body>
