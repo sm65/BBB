@@ -15,7 +15,9 @@
   <h1>UDP server test</h1> 
   <?php
   $socket=socket_create(AF_INET,SOCK_DGRAM,0);
+  $socket_bind($socket,"0.0.0.0",5001);
   echo "socket: ".$socket;
+  $socket_close($socket);
   ?>
  </body>
 </html>
