@@ -16,10 +16,9 @@
   <?php
   $addr = '0.0.0.0';
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
-  echo "socket: ".$sock;
   socket_bind($sock,$addr,5001);
   socket_recvfrom($sock,$buf,14,0,$rip,$rport);
-  echo "Received ".$buf."from ".$rip.$rport;
+  echo $buf."\n";
   socket_close($sock);
   ?>
  </body>
