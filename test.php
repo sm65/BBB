@@ -14,10 +14,12 @@
 	?>
   <h1>UDP server test</h1> 
   <?php
-  $socket=socket_create(AF_INET,SOCK_DGRAM,0);
-  $socket_bind($socket,"0.0.0.0",5001);
-  echo "socket: ".$socket;
-  $socket_close($socket);
+  $addr = '0.0.0.0';
+  echo localhost;
+  $sock = socket_create(AF_INET,SOCK_DGRAM,0);
+  $socket_bind($sock,$addr,5001);
+  echo "socket: ".$sock;
+  $socket_close($sock);
   ?>
  </body>
 </html>
