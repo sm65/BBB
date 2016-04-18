@@ -18,7 +18,8 @@
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
   echo "socket: ".$sock;
   socket_bind($sock,$addr,5001);
-  echo "socket: ".$sock;
+  socket_recvfrom($sock,$buf,14,0,$rip,$rport);
+  echo "Received ".$buf."from ".$rip.$rport;
   socket_close($sock);
   ?>
  </body>
