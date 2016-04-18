@@ -17,8 +17,9 @@
   $addr = '0.0.0.0';
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
   echo "socket: ".$sock;
-  $socket_bind($sock,"localhost",5001);
-  $socket_close($sock);
+  socket_bind($sock,$addr,5001);
+  echo "socket: ".$sock;
+  socket_close($sock);
   ?>
  </body>
 </html>
