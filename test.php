@@ -13,7 +13,9 @@
 	include('includes/nav.php');
 	include('includes/sidebar.php');
 	?>
-  <h1>UDP server test</h1> 
+  <h1>UDP server test</h1>
+  <br></br>
+  <p>Remote WiFi UDP client</p>
   <?php
   $addr = '0.0.0.0';
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
