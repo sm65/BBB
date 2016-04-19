@@ -19,7 +19,7 @@
 	include('includes/sidebar.php');
 	?>
   <h1>UDP server test</h1>
-  <p class="tab">Remote WiFi UDP client:
+  <p class="tab">Remote WiFi UDP client:<br></br>
   <?php
   $addr = '0.0.0.0';
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
