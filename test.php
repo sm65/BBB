@@ -19,8 +19,7 @@
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
   socket_bind($sock,$addr,5001);
   socket_recvfrom($sock,$buf,14,0,$rip,$rport);
-  echo "Temperature: ".$buf, PHP_EOL;
-  echo "IP Address ".$rip;
+  echo "Temperature: ".$buf, "\n\r", "IP Address ".$rip;
   socket_close($sock);
   ?>
  </body>
