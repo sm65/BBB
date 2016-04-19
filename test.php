@@ -1,6 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+<style type="text/css">
+<!--
+.tab { margin-left: 40px; }
+-->
+</style>	
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -13,8 +18,8 @@
 	include('includes/nav.php');
 	include('includes/sidebar.php');
 	?>
-  <h1><center>UDP server test</center></h1>
-  <p> Remote WiFi UDP client:</p>
+  <h1>UDP server test</h1>
+  <p class="tab">Remote WiFi UDP client:
   <?php
   $addr = '0.0.0.0';
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
@@ -23,5 +28,6 @@
   echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
   socket_close($sock);
   ?>
+  </p>
  </body>
 </html>
