@@ -20,6 +20,7 @@
   socket_bind($sock,$addr,5001);
   socket_recvfrom($sock,$buf,14,0,$rip,$rport);
   echo $buf."\r\n";
+  echo $rip;
   socket_close($sock);
   ?>
  </body>
