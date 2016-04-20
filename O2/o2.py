@@ -13,7 +13,7 @@ degf = round(degc*1.8+20,1)
 with open('/sys/devices/ocp.3/44e0d000.tscadc/tiadc/iio:device0/in_voltage4_raw', 'r') as f:
         read_data = f.read()
         f.closed
-with open('/var/www/spanAtoD.csv', 'r') as f:
+with open('/var/www/temp/spanAtoD.csv', 'r') as f:
         spanAtoD = f.read()
         f.closed
 #print spanAtoD
