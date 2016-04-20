@@ -36,7 +36,7 @@ else{
 <h3>Live Oxygen Readings</h3>
 <?php
 $AtoD = file_get_contents('/sys/devices/ocp.3/44e0d000.tscadc/tiadc/iio:device0/in_voltage4_raw');
-$spanAtoD=file_get_contents('temp\spanAtoD.csv');
+$spanAtoD=file_get_contents('temp/spanAtoD.csv');
 $zeroAtoD=400;
 $calfactor=20.9/($spanAtoD-$zeroAtoD);
 $O2=($AtoD-$zeroAtoD)*$calfactor;
@@ -46,7 +46,7 @@ $_SESSION['O2'] = $O2;
 session_write_close();
 if (isset($_POST['button']))
 {
-$file='temp\spanAtoD.csv';
+$file='temp/spanAtoD.csv';
 file_put_contents($file, $AtoD);
 }
 ?>
