@@ -30,8 +30,8 @@
   ?>
   <br></br>
   <?php
-  $location = file_get_contents('http://freegeoip.net/json/'.$_SERVER['REMOTE_ADDR']);
- print_r($location);
+  $details = json_decode(file_get_contents("http://ipinfo.io/"));
+  echo $details->city; // city
  ?>
   </p>
  </body>
