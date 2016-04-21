@@ -28,6 +28,11 @@
   echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
   socket_close($sock);
   ?>
+  <br></br>
+  <?php
+  $location = file_get_contents('http://freegeoip.net/json/'.$_SERVER['REMOTE_ADDR']);
+ print_r($location);
+ ?>
   </p>
  </body>
 </html>
