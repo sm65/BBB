@@ -28,12 +28,6 @@
   echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
   socket_close($sock);
   ?>
-  <br></br>
-  <?php
-$ip = $_SERVER['REMOTE_ADDR'];
-$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-echo $details->city; 
- ?>
   </p>
  </body>
 </html>
