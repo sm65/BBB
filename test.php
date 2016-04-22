@@ -31,8 +31,16 @@
   	echo 'socket_bind success.'."\n";
   }
   ;
-  //socket_recvfrom($sock,$buf,14,0,$rip,$rport);
-  //echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
+  if (!(socket_recvfrom($sock,$buf,14,0,$rip,$rport))){
+        $errorcode = socket_last_error();
+        $errormsg = socket_strerror($errorcode);
+
+    if( ! in_array($errorcode, array(35) ) )
+      die("Could not receive data: [$errorcode] $errormsg \n");
+  }
+  else{
+  echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
+  }
   socket_close($sock);
   ?>
   </p>
