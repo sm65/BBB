@@ -27,6 +27,9 @@
   socket_close($sock);
        echo 'socket_bind failed: '.socket_strerror(socket_last_error())."\n";
   }
+  else{
+  	echo 'socket_bind success.'
+  }
   ;
   //socket_recvfrom($sock,$buf,14,0,$rip,$rport);
   //echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
