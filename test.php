@@ -30,7 +30,7 @@
   else{
   	echo 'socket_bind success.'."\n";
   }
-  ;
+  /*
   if (!(socket_recvfrom($sock,$buf,14,0,$rip,$rport))){
         $errorcode = socket_last_error();
         $errormsg = socket_strerror($errorcode);
@@ -42,6 +42,7 @@
   else{
   echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
   }
+  */
   socket_close($sock);
   ?>
   </p>
