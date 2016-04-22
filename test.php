@@ -28,7 +28,7 @@
        echo 'socket_bind failed: '.socket_strerror(socket_last_error())."\n";
   }
   else{
-  	echo 'socket_bind success.'
+  	echo 'socket_bind success.'."\n";
   }
   ;
   //socket_recvfrom($sock,$buf,14,0,$rip,$rport);
