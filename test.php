@@ -24,8 +24,8 @@
   $addr = '0.0.0.0';
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
   socket_bind($sock,$addr,5001);
-  socket_recvfrom($sock,$buf,14,0,$rip,$rport);
-  echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
+  //socket_recvfrom($sock,$buf,14,0,$rip,$rport);
+  //echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
   socket_close($sock);
   ?>
   </p>
