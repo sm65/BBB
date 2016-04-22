@@ -36,6 +36,7 @@
         $errormsg = socket_strerror($errorcode);
 
     if( ! in_array($errorcode, array(35) ) )
+    socket_close($sock);
       die("Could not receive data: [$errorcode] $errormsg \n");
   }
   else{
