@@ -12,7 +12,7 @@
 <meta name="author" content="" />
 <meta http-equiv="refresh" content="5" />
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<title>Test Page</title>
+<title>WiFI</title>
  <body>
  	<?php include('includes/header.php');
 	include('includes/nav.php');
