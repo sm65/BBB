@@ -25,10 +25,10 @@
   $sock = socket_create(AF_INET,SOCK_DGRAM,0);
   if (!(socket_bind($sock,$addr,5001))){
   socket_close($sock);
-       echo 'socket_bind failed: '.socket_strerror(socket_last_error())."\n";
+       echo 'socket_bind failed: '.socket_strerror(socket_last_error())."\n\r";
   }
   else{
-  	echo 'socket_bind success.'."\n";
+  	echo 'socket_bind success.'."\n\r";
   }
   if (!(socket_recvfrom($sock,$buf,14,0,$rip,$rport))){
         $errorcode = socket_last_error();
@@ -36,7 +36,7 @@
 
     if( ! in_array($errorcode, array(35) ) )
     socket_close($sock);
-      die("Could not receive data: [$errorcode] $errormsg \n");
+      die("Could not receive data: [$errorcode] $errormsg \n\r");
   }
   else{
   echo nl2br(" Temperature: $buf\n\r IP Address: $rip");
