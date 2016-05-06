@@ -37,8 +37,8 @@
       die("Could not receive data: [$errorcode] $errormsg \n\r");
   }
   else{
-  substr_replace($buff, '', -1);
-  echo nl2br(" socket_bind success!\n\r Temperature: $buf\n\r IP Address: $rip");
+  $temperature substr ( $buf , 0, -1 );
+  echo nl2br(" socket_bind success!\n\r Temperature:  $temperature\n\r IP Address: $rip");
   }
   socket_close($sock);
   }
