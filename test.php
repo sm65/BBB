@@ -38,7 +38,7 @@
   }
   else{
   substr_replace($buff, '', -1);
-  echo nl2br(" socket_bind success!\n\r Temperature: $buf1\n\r IP Address: $rip");
+  echo nl2br(" socket_bind success!\n\r Temperature: $buf\n\r IP Address: $rip");
   }
   socket_close($sock);
   }
