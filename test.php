@@ -38,7 +38,8 @@
   }
   else{
   $temperature = substr($buf, 0, -7);
-  echo nl2br(" socket_bind success!\n\r Temperature:  $temperature\n\r IP Address: $rip");
+  $heartbeat = substr($buf, 8, -6);
+  echo nl2br(" socket_bind success!\n\r Temperature:  $temperature\n\r IP Address: $rip\n\r Ten second rollover counter (heartbeat): $heartbeat");
   }
   socket_close($sock);
   }
