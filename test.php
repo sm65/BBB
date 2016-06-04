@@ -20,6 +20,7 @@
 <meta name="author" content="" />
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <title>WiFI</title>
+</head>
  <body>
  	<?php include('includes/header.php');
 	include('includes/nav.php');
