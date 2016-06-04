@@ -184,6 +184,7 @@ google.setOnLoadCallback(load);
 <div id="body">
 <div id="feedControlTech">Loading Tech...</div>
 </div>
+<?php include('includes/footer.php'); ?>
                 </div> <!-- End #wrapper -->
         </body>
 </html>
