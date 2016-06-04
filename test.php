@@ -6,6 +6,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <meta name="author" content="" />
+<meta http-equiv="refresh" content="5" />
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <title>WiFI</title>
 </head>
