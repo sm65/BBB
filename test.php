@@ -16,7 +16,7 @@
 	include('includes/nav.php');
 	?>
   <div id="content">	
-  <h1>UDP server test</h1>
+  <h3>UDP server test</h3>
   <p class="tab">Remote WiFi UDP client:<br></br>
   <?php
   $addr = '0.0.0.0';
