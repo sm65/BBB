@@ -35,9 +35,10 @@
       die("Could not receive data: [$errorcode] $errormsg \n\r");
   }
   else{
-  $temperature = substr($buf, 0, -7);
-  $heartbeat = substr($buf, 7, -6);
-  echo nl2br(" socket_bind success!\n\r Temperature:  $temperature\n\r IP Address: $rip\n\r Ten second rollover counter (heartbeat): $heartbeat");
+  $temperature = substr($buf, 0, 8);
+  $voltage = substr($buf, 8, 7);
+  $heartbeat = substr($buf, -1);
+  echo nl2br(" socket_bind success!\n\r Temperature:  $temperature\n\r Battery Voltage:  $voltage\n\r IP Address: $rip\n\r Ten second rollover counter (heartbeat): $heartbeat");
   }
   socket_close($sock);
   }
