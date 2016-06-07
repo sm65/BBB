@@ -26,7 +26,7 @@
        echo 'socket_bind failed: '.socket_strerror(socket_last_error())."\n\r";
   }
   else{
-  if (!(socket_recvfrom($sock,$buf,14,0,$rip,$rport))){
+  if (!(socket_recvfrom($sock,$buf,16,0,$rip,$rport))){
         $errorcode = socket_last_error();
         $errormsg = socket_strerror($errorcode);
 
