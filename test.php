@@ -26,7 +26,7 @@
        echo 'socket_bind failed: '.socket_strerror(socket_last_error())."\n\r";
   }
   else{
-  if (!(socket_recvfrom($sock,$buf,16,0,$rip,$rport))){
+  if (!(socket_recvfrom($sock,$buf,25,0,$rip,$rport))){
         $errorcode = socket_last_error();
         $errormsg = socket_strerror($errorcode);
 
@@ -36,9 +36,10 @@
   }
   else{
   $temperature = substr($buf, 0, 8);
-  $voltage = substr($buf, 8, 7);
-  $heartbeat = substr($buf, -1);
-  echo nl2br(" socket_bind success!\n\r Temperature:  $temperature\n\r Battery Voltage:  $voltage\n\r IP Address: $rip\n\r Ten second rollover counter (heartbeat): $heartbeat");
+  $voltage =     substr($buf, 8, 7);
+  $cpm =	 substr($buf, 15, 9);  
+  $heartbeat =   substr($buf, -1);
+  echo nl2br(" socket_bind success!\n\r Temperature:  $temperature\n\r Battery Voltage:  $voltage\n\r Radiation:  $cpm\n\r IP Address: $rip\n\r Ten second rollover counter (heartbeat): $heartbeat");
   }
   socket_close($sock);
   }
