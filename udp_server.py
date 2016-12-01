@@ -14,11 +14,11 @@ sock.bind((UDP_IP, UDP_PORT))
 print "waiting"
 #try:
     #while True:
-        data, addr = sock.recvfrom(25) # buffer size is 1024 bytes
+data, addr = sock.recvfrom(25) # buffer size is 1024 bytes
         #print "received message:", data, " address:", addr
 #except KeyboardInterrupt:
     #pass
-    sock.close()
+sock.close()
 print_data = str(datenow) + ', ' + data[16:20]
 print print_data
 with open('/var/www/temp/Log.csv', 'a') as f:
