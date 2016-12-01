@@ -45,6 +45,9 @@
   }
   ?>
   </p>
+  <h3>Log file</h3>
+  <form method="get" action="temp/Log.csv">
+  <button type="submit">Download</button>
   </div> <!-- end #content -->
 <?php include('includes/sidebar.php'); ?>
 <?php include('includes/footer.php'); ?>
