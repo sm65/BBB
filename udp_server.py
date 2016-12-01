@@ -18,7 +18,7 @@ try:
         #print "received message:", data, " address:", addr
 except socket.timeout:
     sock.close()
-print_data = str(datenow) + ', ' + data[15:20]
+print_data = str(datenow) + ', ' + data[15:20] + '\n'
 print print_data
 with open('/var/www/temp/Log.csv', 'a') as f:
         f.write(print_data)
