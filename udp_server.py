@@ -3,7 +3,7 @@ import subprocess
 d = subprocess.Popen("date", stdout=subprocess.PIPE, shell=True)
 (datenow, err) = d.communicate()
 datenow = datenow.strip()
-data="              error"
+data="               error"
 UDP_IP = "0.0.0.0"
 UDP_PORT = 5001
 
