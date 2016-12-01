@@ -19,7 +19,7 @@ data, addr = sock.recvfrom(25) # buffer size is 1024 bytes
 #except KeyboardInterrupt:
     #pass
 sock.close()
-print_data = str(datenow) + ', ' + data[16:20]
+print_data = str(datenow) + ', ' + data[15:20]
 print print_data
 with open('/var/www/temp/Log.csv', 'a') as f:
         f.write(print_data)
