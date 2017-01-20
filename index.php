@@ -6,10 +6,14 @@
 <meta name="keywords" content="" />
 <meta name="author" content="" />
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<title>Home Page</title>
-                <div> 
-        <body>
-<?php include('includes/footer.php'); ?>
-                </div> <!-- End #wrapper -->
-        </body>
+
+<title>Main Page</title>
+</head>
+	<body>
+		<div id="wrapper">
+<?php include('includes/header.php'); ?>
+<?php include('includes/nav.php'); ?>
+<?php include('includes/sidebar.php'); ?>
+		</div> <!-- End #wrapper -->
+	</body>
 </html>
