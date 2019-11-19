@@ -14,11 +14,11 @@
 <?php include('includes/header.php'); ?>
 <?php include('includes/nav.php'); ?>
 <?php include('includes/sidebar.php'); ?>	
-<!-- start sw-rss-feed code --> 		
+<!-- start sw-rss-feed code --> 
 <script type="text/javascript"> 
 <!-- 
 rssfeed_url = new Array(); 
-rssfeed_url[0]="reddit.com/r/worldnews/.rss";  
+rssfeed_url[0]="https://news.google.com/rss?x=1571747254.2933&hl=en-US&gl=US&ceid=US:en";  
 rssfeed_frame_width="250"; 
 rssfeed_frame_height="750"; 
 rssfeed_scroll="off"; 
@@ -58,7 +58,7 @@ rssfeed_cache = "5e35f4ec904fb58d73850becf1d740d6";
 <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
 <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
 <div style="color:#ccc;font-size:10px; text-align:right; width:250px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div> 
-<!-- end sw-rss-feed code -->		
+<!-- end sw-rss-feed code -->	
 <!-- start sw-rss-feed code --> 
 <script type="text/javascript"> 
 <!-- 
