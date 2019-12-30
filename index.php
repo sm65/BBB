@@ -14,51 +14,7 @@
 <?php include('includes/header.php'); ?>
 <?php include('includes/nav.php'); ?>
 <?php include('includes/sidebar.php'); ?>	
-<!-- start sw-rss-feed code --> 
-<script type="text/javascript"> 
-<!-- 
-rssfeed_url = new Array(); 
-rssfeed_url[0]="https://news.google.com/rss?x=1571747254.2933&hl=en-US&gl=US&ceid=US:en";  
-rssfeed_frame_width="250"; 
-rssfeed_frame_height="750"; 
-rssfeed_scroll="off"; 
-rssfeed_scroll_step="6"; 
-rssfeed_scroll_bar="off"; 
-rssfeed_target="_blank"; 
-rssfeed_font_size="12"; 
-rssfeed_font_face=""; 
-rssfeed_border="on"; 
-rssfeed_css_url="https://feed.surfing-waves.com/css/style2a.css"; 
-rssfeed_title="off"; 
-rssfeed_title_name=""; 
-rssfeed_title_bgcolor="#3366ff"; 
-rssfeed_title_color="#fff"; 
-rssfeed_title_bgimage=""; 
-rssfeed_footer="off"; 
-rssfeed_footer_name="rss feed"; 
-rssfeed_footer_bgcolor="#fff"; 
-rssfeed_footer_color="#333"; 
-rssfeed_footer_bgimage=""; 
-rssfeed_item_title_length="50"; 
-rssfeed_item_title_color="#666"; 
-rssfeed_item_bgcolor="#fff"; 
-rssfeed_item_bgimage=""; 
-rssfeed_item_border_bottom="on"; 
-rssfeed_item_source_icon="off"; 
-rssfeed_item_date="on"; 
-rssfeed_item_description="on"; 
-rssfeed_item_description_length="120"; 
-rssfeed_item_description_color="#666"; 
-rssfeed_item_description_link_color="#333"; 
-rssfeed_item_description_tag="off"; 
-rssfeed_no_items="10"; 
-rssfeed_cache = "5e35f4ec904fb58d73850becf1d740d6"; 
-//--> 
-</script> 
-<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
-<!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
-<div style="color:#ccc;font-size:10px; text-align:right; width:250px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div> 
-<!-- end sw-rss-feed code -->	
+<div id="widgetmain" style="text-align:left;overflow-y:auto;overflow-x:hidden;width:200px;background-color:#transparent; border:1px solid #333333;"><div id="rsswidget" style="height:500px;"><iframe src="http://us1.rssfeedwidget.com/getrss.php?time=1577739612589&amp;x=http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories&amp;w=200&amp;h=500&amp;bc=333333&amp;bw=1&amp;bgc=transparent&amp;m=20&amp;it=true&amp;t=(default)&amp;tc=333333&amp;ts=15&amp;tb=transparent&amp;il=true&amp;lc=0000FF&amp;ls=14&amp;lb=false&amp;id=true&amp;dc=333333&amp;ds=14&amp;idt=true&amp;dtc=284F2D&amp;dts=12" border="0" hspace="0" vspace="0" marginwidth="0" marginheight="0" style="border:0; padding:0; margin:0; width:200px; height:500px;" id="rssOutput" frameborder="no">Reading RSS Feed ...</iframe></div><div style="text-align:right;margin-bottom:0;border-top:1px solid #333333;" id="widgetbottom"><span style="font-size:70%"><a href="http://www.rssfeedwidget.com">rss feed widget</a>&nbsp;</span><br></div></div>
 		</div> <!-- End #wrapper -->
 	</body>
 </html>
