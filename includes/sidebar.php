@@ -1,7 +1,7 @@
 <div id="sidebar">
 
 <h3>Links</h3>
-        <li><a href="http://www.wunderground.com/US/NC/Indian_Trail.html?extendedsun=sunon&MR=1" target="_self">WunderGround IT</a></li>
+        <li><a href="https://www.wunderground.com/weather/us/nc/matthews/KNCMATTH53">WunderGround IT</a></li>
         <li><a href="https://login.excite.com/">Email</a></li>
         <li><a href="http://www.tvguide.com/listings/">TV</a></li>
         <li><a href="https://www.youtube.com/">You Tube</a></li>
