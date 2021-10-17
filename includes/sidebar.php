@@ -7,5 +7,6 @@
         <li><a href="https://www.youtube.com/">You Tube</a></li>
         <li><a href="http://www.spacedaily.com/">Spacedaily</a></li>
 	<li><a href="https://github.com/sm65/BBB">Source code page</a></li>
+	<li><a href="https://apod.nasa.gov/apod/">NASA APOD</a></li>
 <p></p>
 </div> <!-- end #sidebar -->
