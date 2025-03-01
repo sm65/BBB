@@ -16,7 +16,38 @@
 	include('includes/nav.php');
 	?>
   <div id="content">	
-  <div id="widgetmain" style="text-align:left;overflow-y:auto;overflow-x:hidden;width:250px;background-color:#transparent; border:1px solid #333333;"><div id="rsswidget" style="height:750px;"><iframe src="http://www.smealy.com/getrss.php?time=1740835304222&amp;x=https%3A%2F%2Fmediabiasfactcheck.com%2Frss&amp;w=250&amp;h=750&amp;bc=333333&amp;bw=1&amp;bgc=transparent&amp;m=10&amp;it=false&amp;t=(default)&amp;tc=333333&amp;ts=15&amp;tb=transparent&amp;il=true&amp;lc=0000FF&amp;ls=14&amp;lb=false&amp;id=false&amp;dc=333333&amp;ds=14&amp;idt=false&amp;dtc=284F2D&amp;dts=12" border="0" hspace="0" vspace="0" frameborder="no" marginwidth="0" marginheight="0" style="border:0; padding:0; margin:0; width:250px; height:750px;" id="rssOutput">Reading RSS Feed ...</iframe></div><div style="text-align:right;margin-bottom:0;border-top:1px solid #333333;" id="widgetbottom"><span style="font-size:70%"><a href="https://www.rssfeedwidget.com">rss feed widget</a>&nbsp;</span><br></div></div>
+  <h3>UDP server test</h3>
+  <p class="tab">Remote WiFi UDP client:<br></br>
+  <?php
+  $addr = '0.0.0.0';
+  $sock = socket_create(AF_INET,SOCK_DGRAM,0);
+  if (!(socket_bind($sock,$addr,5001))){
+  socket_close($sock);
+       echo 'socket_bind failed: '.socket_strerror(socket_last_error())."\n\r";
+  }
+  else{
+  if (!(socket_recvfrom($sock,$buf,25,0,$rip,$rport))){
+        $errorcode = socket_last_error();
+        $errormsg = socket_strerror($errorcode);
+
+    if( ! in_array($errorcode, array(35) ) )
+    socket_close($sock);
+      die("Could not receive data: [$errorcode] $errormsg \n\r");
+  }
+  else{
+  $temperature = substr($buf, 0, 8);
+  $voltage =     substr($buf, 8, 7);
+  $cpm =	 substr($buf, 15, 9);  
+  $heartbeat =   substr($buf, -1);
+  echo nl2br(" socket_bind success!\n\r Temperature:  $temperature\n\r Battery Voltage:  $voltage\n\r Radiation:  $cpm\n\r IP Address: $rip\n\r Ten second rollover counter (heartbeat): $heartbeat");
+  }
+  socket_close($sock);
+  }
+  ?>
+  </p>
+  <h3>Log file</h3>
+  <form method="get" action="temp/Log.csv">
+  <button type="submit">Download</button>
   </div> <!-- end #content -->
 <?php include('includes/sidebar.php'); ?>
 <?php include('includes/footer.php'); ?>
